@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://v7q2bejmkwq2"]
+
+[ext_resource type="Texture2D" uid="uid://bm6ljet3qrdys" path="res://icon.svg" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=1235009487]
+
+[node name="Brian was Here" type="Sprite2D" parent="." unique_id=830732615]
+texture = ExtResource("1_wtcfe")
