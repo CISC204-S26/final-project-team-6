@@ -19,7 +19,12 @@ shape = SubResource("RectangleShape2D_dvont")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=439857206]
 texture = ExtResource("2_n5fpy")
 
-[node name="InteractRange" type="Area2D" parent="." unique_id=74930307]
+[node name="InteractionDetector" type="Area2D" parent="." unique_id=74930307]
+light_mask = 2
+visibility_layer = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractRange" unique_id=107637564]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionDetector" unique_id=107637564]
 shape = SubResource("CircleShape2D_n5fpy")
+
+[connection signal="area_entered" from="InteractionDetector" to="." method="_on_interaction_detector_area_entered"]
+[connection signal="area_exited" from="InteractionDetector" to="." method="_on_interaction_detector_area_exited"]
