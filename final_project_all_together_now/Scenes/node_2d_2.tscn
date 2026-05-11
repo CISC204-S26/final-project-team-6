@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cf5x4n0pfrxk1"]
+
+[ext_resource type="Texture2D" uid="uid://bm6ljet3qrdys" path="res://Assets/icon.svg" id="1_icdqf"]
+
+[node name="Node2d2" type="Node2D" unique_id=915994297]
+
+[node name="Ryan Was here" type="Sprite2D" parent="." unique_id=65272809]
+position = Vector2(0, 84)
+texture = ExtResource("1_icdqf")

@@ -182,24 +182,24 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kp85"]
-size = Vector2(214, 438)
+size = Vector2(30, 30)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ms8fj"]
-radius = 352.2045
+radius = 20.024984
 
 [node name="Player2" type="CharacterBody2D" unique_id=1418239182]
 script = ExtResource("1_cah6m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=253129733]
 modulate = Color(1, 0.19607843, 0.48235294, 1)
-position = Vector2(8.499996, -6)
-scale = Vector2(0.6033059, 1)
+position = Vector2(-46.500004, 202.75)
+scale = Vector2(0.14224136, 0.048974935)
 sprite_frames = SubResource("SpriteFrames_2dyae")
 animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=913866646]
-position = Vector2(3, -4)
+position = Vector2(-45, 201)
 shape = SubResource("RectangleShape2D_1kp85")
 
 [node name="InteractionDetector" type="Area2D" parent="." unique_id=682167044]
@@ -208,6 +208,7 @@ collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionDetector" unique_id=418455510]
+position = Vector2(-48, 202)
 shape = SubResource("CircleShape2D_ms8fj")
 
 [connection signal="area_entered" from="InteractionDetector" to="." method="_on_interaction_detector_area_entered"]
