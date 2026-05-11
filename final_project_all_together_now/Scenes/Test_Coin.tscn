@@ -7,7 +7,8 @@
 radius = 41.04875
 
 [node name="TestCoin" type="Area2D" unique_id=1941500520]
-visibility_layer = 2
+collision_layer = 2
+collision_mask = 0
 monitoring = false
 script = ExtResource("1_5t3gk")
 metadata/_custom_type_script = "uid://mi4ilpa50yo7"

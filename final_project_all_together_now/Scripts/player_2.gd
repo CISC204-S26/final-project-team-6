@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 
-@export var speed := 200.0
+@export var speed := 250.0
 
 var nearby_interactables = []
 
@@ -11,13 +11,13 @@ func _physics_process(_delta):
 	# ---------------- INPUT ----------------
 	var input_vector = Vector2.ZERO
 
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("p2_right"):
 		input_vector.x += 1
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("p2_left"):
 		input_vector.x -= 1
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("p2_down"):
 		input_vector.y += 1
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("p2_up"):
 		input_vector.y -= 1
 
 	input_vector = input_vector.normalized()
