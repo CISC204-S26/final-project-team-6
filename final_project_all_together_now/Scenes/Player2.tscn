@@ -187,8 +187,7 @@ size = Vector2(214, 438)
 [sub_resource type="CircleShape2D" id="CircleShape2D_ms8fj"]
 radius = 352.2045
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1418239182]
-position = Vector2(438, 334)
+[node name="Player2" type="CharacterBody2D" unique_id=1418239182]
 script = ExtResource("1_cah6m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=253129733]
@@ -205,6 +204,9 @@ position = Vector2(3, -4)
 shape = SubResource("RectangleShape2D_1kp85")
 
 [node name="InteractionDetector" type="Area2D" parent="." unique_id=682167044]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionDetector" unique_id=418455510]
 shape = SubResource("CircleShape2D_ms8fj")
