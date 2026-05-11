@@ -142,7 +142,7 @@ animations = [{
 "texture": ExtResource("30_3ggqf")
 }],
 "loop": true,
-"name": &"Jump",
+"name": &"jump",
 "speed": 30.0
 }, {
 "frames": [{
@@ -195,7 +195,7 @@ modulate = Color(1, 0.19607843, 0.48235294, 1)
 position = Vector2(-46.500004, 202.75)
 scale = Vector2(0.14224136, 0.048974935)
 sprite_frames = SubResource("SpriteFrames_2dyae")
-animation = &"Idle"
+animation = &"jump"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=913866646]

@@ -4,13 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://cab6ui4gxt301" path="res://Scenes/Player1.tscn" id="3_kln2b"]
 [ext_resource type="PackedScene" uid="uid://wttuql64pwyv" path="res://Scenes/Player2.tscn" id="3_rgh2o"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kln2b"]
+size = Vector2(2002, 166)
+
 [node name="Main" type="Node2D" unique_id=134701053]
 
 [node name="TestCoin" parent="." unique_id=1941500520 instance=ExtResource("2_kln2b")]
 position = Vector2(362, 104)
 
 [node name="Player1" parent="." unique_id=1418239182 instance=ExtResource("3_kln2b")]
-position = Vector2(114, 146)
+position = Vector2(910, 296)
 scale = Vector2(0.3, 0.3)
 
 [node name="Player2" parent="." unique_id=880954167 instance=ExtResource("3_rgh2o")]
@@ -49,3 +52,9 @@ position = Vector2(339.4499, 553.73)
 
 [node name="TestCoin12" parent="." unique_id=617685838 instance=ExtResource("2_kln2b")]
 position = Vector2(137.37988, 346.81995)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=299990392]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=202170468]
+position = Vector2(462, 520)
+shape = SubResource("RectangleShape2D_kln2b")

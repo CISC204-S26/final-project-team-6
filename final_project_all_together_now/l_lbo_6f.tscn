@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cqmdme3hu0ho3" path="res://Scripts/LLbo6f.png" id="1_qk6ri"]
 [ext_resource type="PackedScene" uid="uid://cab6ui4gxt301" path="res://Scenes/Player1.tscn" id="2_d42x2"]
 [ext_resource type="PackedScene" uid="uid://wttuql64pwyv" path="res://Scenes/Player2.tscn" id="3_d42x2"]
+[ext_resource type="PackedScene" uid="uid://dl805cguocq0j" path="res://Scenes/Test_Coin.tscn" id="4_1uq0g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1uq0g"]
 size = Vector2(57.98162, 24.200012)
@@ -98,3 +99,9 @@ shape = SubResource("RectangleShape2D_d42x2")
 
 [node name="Player2" parent="." unique_id=10084500 instance=ExtResource("3_d42x2")]
 position = Vector2(-82.49384, -125.53845)
+
+[node name="TestCoin" parent="." unique_id=1941500520 instance=ExtResource("4_1uq0g")]
+position = Vector2(-55.145325, 50.707687)
+
+[node name="TestCoin2" parent="." unique_id=807344864 instance=ExtResource("4_1uq0g")]
+position = Vector2(110.739075, 75.815384)
