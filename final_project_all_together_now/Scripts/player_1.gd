@@ -1,35 +1,57 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
+@onready var animated_sprite = $AnimatedSprite2D
+
+@export var speed := 200.0
 
 var nearby_interactables = []
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta):
+
+	# ---------------- INPUT ----------------
 	var input_vector = Vector2.ZERO
-		
-	#Gets input directions
-	input_vector.x = Input.get_axis("move_left", "move_right")
-	input_vector.y = Input.get_axis("move_up", "move_down")
-	
-	#Ensures moving diagonal isn't faster than normal speed
+
+	if Input.is_action_pressed("move_right"):
+		input_vector.x += 1
+	if Input.is_action_pressed("move_left"):
+		input_vector.x -= 1
+	if Input.is_action_pressed("move_down"):
+		input_vector.y += 1
+	if Input.is_action_pressed("move_up"):
+		input_vector.y -= 1
+
 	input_vector = input_vector.normalized()
+
+	# ---------------- MOVEMENT ----------------
+	velocity = input_vector * speed
+	move_and_slide()
+
+	# ---------------- ANIMATION ----------------
+	if input_vector.length() > 0:
+		if animated_sprite.animation != "run":
+			animated_sprite.play("run")
+	else:
+		if animated_sprite.animation != "Idle":
+			animated_sprite.play("Idle")
+
+	# ---------------- FLIP ----------------
+	if velocity.x < 0:
+		animated_sprite.flip_h = true
+	elif velocity.x > 0:
+		animated_sprite.flip_h = false
 	
+	#Detects if interaction
 	if Input.is_action_just_pressed("p1_interact"):
 		if nearby_interactables:
 			nearby_interactables.back().interact()
-	
-	velocity = input_vector * SPEED
-	
-	move_and_slide()
 
 
+#Functions for detecting interactables
 func _on_interaction_detector_area_entered(area: Area2D) -> void:
 	print("interactable detected")
-	#area.set_active(true)
 	nearby_interactables.append(area)
 
 
 func _on_interaction_detector_area_exited(area: Area2D) -> void:
 	print("interactable removed")
-	#area.set_active(false)
 	nearby_interactables.erase(area)
