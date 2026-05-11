@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 
-@export var speed := 200.0
+@export var speed := 300.0
 
 var nearby_interactables = []
 
