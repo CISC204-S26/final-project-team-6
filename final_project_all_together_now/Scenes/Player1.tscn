@@ -193,14 +193,12 @@ collision_mask = 0
 script = ExtResource("1_2u5n8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=253129733]
-position = Vector2(6.4596853, 37.30123)
 scale = Vector2(0.12465229, 0.08337676)
 sprite_frames = SubResource("SpriteFrames_2dyae")
 animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=913866646]
-position = Vector2(7, 37.1875)
 shape = SubResource("RectangleShape2D_1kp85")
 
 [node name="InteractionDetector" type="Area2D" parent="." unique_id=682167044]
@@ -209,7 +207,6 @@ collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionDetector" unique_id=418455510]
-position = Vector2(9, 38)
 shape = SubResource("CircleShape2D_ms8fj")
 
 [connection signal="area_entered" from="InteractionDetector" to="." method="_on_interaction_detector_area_entered"]
