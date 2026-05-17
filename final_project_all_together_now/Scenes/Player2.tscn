@@ -182,17 +182,17 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kp85"]
-size = Vector2(30, 30)
+size = Vector2(30, 40)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ms8fj"]
-radius = 20.024984
+radius = 25.0
 
 [node name="Player2" type="CharacterBody2D" unique_id=1418239182]
 script = ExtResource("1_cah6m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=253129733]
 modulate = Color(1, 0.19607843, 0.48235294, 1)
-scale = Vector2(0.14224136, 0.048974935)
+scale = Vector2(0.125, 0.083)
 sprite_frames = SubResource("SpriteFrames_2dyae")
 animation = &"jump"
 autoplay = "Idle"
