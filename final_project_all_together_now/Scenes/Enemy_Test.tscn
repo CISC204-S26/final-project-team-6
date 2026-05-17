@@ -3,7 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://bm6ljet3qrdys" path="res://Assets/icon.svg" id="1_5h1e4"]
 [ext_resource type="Script" uid="uid://dswufe7bhlkne" path="res://Scripts/enemy_test.gd" id="2_vdfcf"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdfcf"]
+size = Vector2(146, 142)
+
 [node name="EnemyTest" type="Sprite2D" unique_id=1349215165]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_5h1e4")
 script = ExtResource("2_vdfcf")
+
+[node name="HitboxArea" type="Area2D" parent="." unique_id=664492193]
+
+[node name="HitboxShape" type="CollisionShape2D" parent="HitboxArea" unique_id=1665818105]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_vdfcf")
