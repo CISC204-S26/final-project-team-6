@@ -2,49 +2,33 @@ extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 
-@export var speed := 300.0
-@export var jump_velocity := -500.0
-@export var gravity := 1200.0
+@export var speed := 250.0
+
+var shuriken = preload("res://Scenes/Shuriken.tscn")
 
 var nearby_interactables = []
 
 func _physics_process(delta):
-
-	# ---------------- GRAVITY ----------------
-	if not is_on_floor():
-		velocity.y += gravity * delta
 
 	# ---------------- INPUT ----------------
 	var input_vector = Vector2.ZERO
 
 	if Input.is_action_pressed("move_right"):
 		input_vector.x += 1
-
 	if Input.is_action_pressed("move_left"):
 		input_vector.x -= 1
-
-	input_vector = input_vector.normalized()
+	if Input.is_action_pressed("move_down"):
+		input_vector.y += 1
+	if Input.is_action_pressed("move_up"):
+		input_vector.y -= 1
 
 	# ---------------- MOVEMENT ----------------
-	velocity.x = input_vector.x * speed
-
-	# ---------------- JUMP ----------------
-	if Input.is_action_just_pressed("jump"):
-		print("jump pressed")
-
-		if is_on_floor():
-			velocity.y = jump_velocity
-			animated_sprite.play("jump")
-
-	# ---------------- MOVE CHARACTER ----------------
+	velocity = input_vector * speed
 	move_and_slide()
 
 	# ---------------- ANIMATION ----------------
-	if not is_on_floor():
-		if animated_sprite.animation != "jump":
-			animated_sprite.play("jump")
 
-	elif input_vector.length() > 0:
+	if input_vector.length() > 0:
 		if animated_sprite.animation != "run":
 			animated_sprite.play("run")
 
@@ -52,12 +36,13 @@ func _physics_process(delta):
 		if animated_sprite.animation != "Idle":
 			animated_sprite.play("Idle")
 
-	# ---------------- FLIP SPRITE ----------------
+	# ---------------- FLIP ----------------
 	if velocity.x < 0:
 		animated_sprite.flip_h = true
 
 	elif velocity.x > 0:
 		animated_sprite.flip_h = false
+
 
 	# ---------------- INTERACTION ----------------
 	if Input.is_action_just_pressed("p1_interact"):
