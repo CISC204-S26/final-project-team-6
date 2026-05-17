@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://do7oka5m4iobj"]
 
-[ext_resource type="Texture2D" uid="uid://buml2jw0mdmbe" path="res://TileMap2.2.0.png" id="1_kwbpf"]
+[ext_resource type="Texture2D" uid="uid://buml2jw0mdmbe" path="res://Assets/TileMap2.2.0.png" id="1_kwbpf"]
 [ext_resource type="PackedScene" uid="uid://cab6ui4gxt301" path="res://Scenes/Player1.tscn" id="2_mxmxo"]
 [ext_resource type="PackedScene" uid="uid://wttuql64pwyv" path="res://Scenes/Player2.tscn" id="3_cw237"]
 
@@ -343,18 +343,6 @@ layer_0/tile_data = PackedInt32Array(-327663, 983040, 2, -262127, 983040, 3, -19
 position = Vector2(-25, 24)
 shape = SubResource("RectangleShape2D_1x4av")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes/CollisionShape2D" unique_id=1999730272]
-position = Vector2(161, 79)
-shape = SubResource("RectangleShape2D_1x4av")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes/CollisionShape2D/CollisionShape2D" unique_id=885057188]
-position = Vector2(160, 64)
-shape = SubResource("RectangleShape2D_1x4av")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes/CollisionShape2D/CollisionShape2D/CollisionShape2D" unique_id=896219661]
-position = Vector2(-1, -223)
-shape = SubResource("RectangleShape2D_1x4av")
-
 [node name="SmallTreecollisionShapes" type="StaticBody2D" parent="SecondaryLayer/BigTreeCollisionShapes" unique_id=1674186305]
 position = Vector2(43, -75)
 
@@ -362,25 +350,37 @@ position = Vector2(43, -75)
 position = Vector2(21, 52)
 shape = SubResource("RectangleShape2D_f03nf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes/SmallTreecollisionShapes/CollisionShape2D" unique_id=1521316422]
-position = Vector2(-113, -32)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes/SmallTreecollisionShapes" unique_id=1521316422]
+position = Vector2(-92, 20)
 shape = SubResource("RectangleShape2D_f03nf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes/SmallTreecollisionShapes/CollisionShape2D/CollisionShape2D" unique_id=1114486528]
-position = Vector2(1, 144)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes/SmallTreecollisionShapes" unique_id=1114486528]
+position = Vector2(-91, 164)
 shape = SubResource("RectangleShape2D_f03nf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes/SmallTreecollisionShapes/CollisionShape2D/CollisionShape2D/CollisionShape2D" unique_id=1209013735]
-position = Vector2(63, 79)
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes/SmallTreecollisionShapes" unique_id=1209013735]
+position = Vector2(-28, 243)
 shape = SubResource("RectangleShape2D_f03nf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes/SmallTreecollisionShapes/CollisionShape2D/CollisionShape2D/CollisionShape2D/CollisionShape2D" unique_id=1946276199]
-position = Vector2(225, -142)
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes/SmallTreecollisionShapes" unique_id=1946276199]
+position = Vector2(197, 101)
 shape = SubResource("RectangleShape2D_f03nf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes/SmallTreecollisionShapes/CollisionShape2D/CollisionShape2D/CollisionShape2D/CollisionShape2D/CollisionShape2D" unique_id=1269832858]
-position = Vector2(64, 64)
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes/SmallTreecollisionShapes" unique_id=1269832858]
+position = Vector2(261, 165)
 shape = SubResource("RectangleShape2D_f03nf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes" unique_id=1999730272]
+position = Vector2(136, 103)
+shape = SubResource("RectangleShape2D_1x4av")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes" unique_id=885057188]
+position = Vector2(296, 167)
+shape = SubResource("RectangleShape2D_1x4av")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="SecondaryLayer/BigTreeCollisionShapes" unique_id=896219661]
+position = Vector2(295, -56)
+shape = SubResource("RectangleShape2D_1x4av")
 
 [node name="Player1" parent="." unique_id=1418239182 instance=ExtResource("2_mxmxo")]
 position = Vector2(419, 311)

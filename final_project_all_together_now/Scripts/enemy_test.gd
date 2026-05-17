@@ -5,6 +5,7 @@ var rightBound = 1100.0
 var topBound = 50.0
 var bottomBound = 600.0
 var movementSpeed = 300.0
+var health = 1
 
 var targetPosition: Vector2
 var movingRight: bool = false
