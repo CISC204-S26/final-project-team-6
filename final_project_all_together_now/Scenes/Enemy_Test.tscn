@@ -4,5 +4,6 @@
 [ext_resource type="Script" uid="uid://dswufe7bhlkne" path="res://Scripts/enemy_test.gd" id="2_vdfcf"]
 
 [node name="EnemyTest" type="Sprite2D" unique_id=1349215165]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_5h1e4")
 script = ExtResource("2_vdfcf")

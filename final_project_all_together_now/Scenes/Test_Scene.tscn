@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://byyj0rd8n1v4l"]
+
+[ext_resource type="PackedScene" uid="uid://be8g3tmo1saps" path="res://Scenes/Enemy_Test.tscn" id="1_4ms0o"]
+
+[node name="TestScene" type="Node2D" unique_id=925440372]
+
+[node name="EnemyTest" parent="." unique_id=1349215165 instance=ExtResource("1_4ms0o")]
+position = Vector2(468, 293)
