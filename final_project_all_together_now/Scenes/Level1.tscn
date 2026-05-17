@@ -1,11 +1,12 @@
 [gd_scene format=4 uid="uid://do7oka5m4iobj"]
 
-[ext_resource type="Texture2D" uid="uid://buml2jw0mdmbe" path="res://Assets/TileMap2.2.0.png" id="1_kwbpf"]
-[ext_resource type="PackedScene" uid="uid://cab6ui4gxt301" path="res://Scenes/Player1.tscn" id="2_mxmxo"]
-[ext_resource type="PackedScene" uid="uid://wttuql64pwyv" path="res://Scenes/Player2.tscn" id="3_cw237"]
+[ext_resource type="Texture2D" uid="uid://buml2jw0mdmbe" path="res://Assets/TileMap2.2.0.png" id="1_jghel"]
+[ext_resource type="PackedScene" uid="uid://cab6ui4gxt301" path="res://Scenes/Player1.tscn" id="2_slnnj"]
+[ext_resource type="PackedScene" uid="uid://wttuql64pwyv" path="res://Scenes/Player2.tscn" id="3_t3or0"]
+[ext_resource type="PackedScene" uid="uid://be8g3tmo1saps" path="res://Scenes/Enemy_Test.tscn" id="4_ysn8j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mxmxo"]
-texture = ExtResource("1_kwbpf")
+texture = ExtResource("1_jghel")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -157,7 +158,7 @@ texture = ExtResource("1_kwbpf")
 sources/0 = SubResource("TileSetAtlasSource_mxmxo")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uaiby"]
-texture = ExtResource("1_kwbpf")
+texture = ExtResource("1_jghel")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -382,8 +383,14 @@ shape = SubResource("RectangleShape2D_1x4av")
 position = Vector2(295, -56)
 shape = SubResource("RectangleShape2D_1x4av")
 
-[node name="Player1" parent="." unique_id=1418239182 instance=ExtResource("2_mxmxo")]
+[node name="Player1" parent="." unique_id=1418239182 instance=ExtResource("2_slnnj")]
 position = Vector2(419, 311)
+scale = Vector2(1.4, 1.4)
 
-[node name="Player2" parent="." unique_id=541688721 instance=ExtResource("3_cw237")]
+[node name="Player2" parent="." unique_id=541688721 instance=ExtResource("3_t3or0")]
 position = Vector2(645, 302)
+scale = Vector2(1.4, 1.4)
+
+[node name="EnemyTest" parent="." unique_id=1349215165 instance=ExtResource("4_ysn8j")]
+position = Vector2(783, 336)
+scale = Vector2(0.4, 0.4)

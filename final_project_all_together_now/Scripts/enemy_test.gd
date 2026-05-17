@@ -1,9 +1,9 @@
 extends Sprite2D
 
-var leftBound = 50.0
-var rightBound = 1100.0
-var topBound = 50.0
-var bottomBound = 600.0
+var leftBound = 150.0
+var rightBound = 1000.0
+var topBound = 100.0
+var bottomBound = 550.0
 var movementSpeed = 300.0
 var health = 1
 
