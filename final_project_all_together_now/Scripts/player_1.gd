@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var speed := 250.0
 
 var shuriken = preload("res://Scenes/Shuriken.tscn")
+var katana = preload("res://Scenes/katana.tscn")
 
 var nearby_interactables = []
 
@@ -21,6 +22,10 @@ func _physics_process(delta):
 		input_vector.y += 1
 	if Input.is_action_pressed("move_up"):
 		input_vector.y -= 1
+	
+	input_vector = input_vector.normalized()
+	if Input.is_action_just_pressed("Katana"):
+		slash_katana(velocity)
 
 	# ---------------- MOVEMENT ----------------
 	velocity = input_vector * speed
@@ -59,3 +64,10 @@ func _on_interaction_detector_area_entered(area: Area2D) -> void:
 func _on_interaction_detector_area_exited(area: Area2D) -> void:
 	print("interactable removed")
 	nearby_interactables.erase(area)
+
+# -----------------------WEAPON USUAGE(WIP)------------------------
+func slash_katana(dir: Vector2):
+	var newkatana = katana.instantiate()
+	newkatana.direction = dir
+	newkatana.position = position
+	add_sibling(newkatana)
