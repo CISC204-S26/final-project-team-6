@@ -7,7 +7,7 @@
 size = Vector2(138, 137)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jcd86"]
-radius = 64.03124
+radius = 44.04543
 
 [node name="Enemy2" type="Sprite2D" unique_id=1480797456]
 modulate = Color(0.2901961, 1, 0.19215687, 1)
