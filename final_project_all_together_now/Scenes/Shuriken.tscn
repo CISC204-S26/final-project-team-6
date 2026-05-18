@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://cnupan5tsyo0d"]
 
 [ext_resource type="Script" uid="uid://ct7ghx71qal2c" path="res://Scripts/shuriken.gd" id="1_4nxnp"]
-[ext_resource type="Texture2D" uid="uid://bgvlvvpc8d0w8" path="res://Assets/shuriken.png" id="2_lmnj0"]
+[ext_resource type="Texture2D" uid="uid://byn7uqwdxbbs7" path="res://Assets/Shuriken.png" id="2_4nxnp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4nxnp"]
-size = Vector2(4, 6)
+[sub_resource type="CircleShape2D" id="CircleShape2D_lmnj0"]
+radius = 7.0
 
 [node name="Shuriken" type="Node2D" unique_id=477489330]
 script = ExtResource("1_4nxnp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=973886618]
-scale = Vector2(0.061538465, 0.06944444)
-texture = ExtResource("2_lmnj0")
+scale = Vector2(0.03, 0.034)
+texture = ExtResource("2_4nxnp")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1313935872]
 
 [node name="HurtBoxShuriken" type="CollisionShape2D" parent="Area2D" unique_id=2107974289]
-shape = SubResource("RectangleShape2D_4nxnp")
+shape = SubResource("CircleShape2D_lmnj0")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

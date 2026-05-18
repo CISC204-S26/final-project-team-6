@@ -7,11 +7,9 @@ extends CharacterBody2D
 var shuriken = preload("res://Scenes/Shuriken.tscn")
 
 var nearby_interactables = []
+var facing = Vector2(1,0)
 
-func _physics_process(
-	
-	
-	delta):
+func _physics_process(delta):
 
 	# ---------------- INPUT ----------------
 	var input_vector = Vector2.ZERO
@@ -26,13 +24,16 @@ func _physics_process(
 		input_vector.y -= 1
 
 	input_vector = input_vector.normalized()
-	if Input.is_action_just_pressed("Shuriken"):
-		shoot_shuriken(velocity)
-		
 
 	# ---------------- MOVEMENT ----------------
 	velocity = input_vector * speed
 	move_and_slide()
+	if input_vector.length() > 0:
+		facing = input_vector.normalized()
+	
+	#Shuriken
+	if Input.is_action_just_pressed("Shuriken"):
+		shoot_shuriken(facing)
 
 	# ---------------- ANIMATION ----------------
 
