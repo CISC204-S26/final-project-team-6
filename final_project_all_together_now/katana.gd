@@ -1,19 +1,17 @@
 extends Node2D
-@export var direction = Vector2(0,0)
+var direction = Vector2(0, 0)
+var damage = 3
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if direction == Vector2 (0,0):
-		direction = Vector2(0,0)
-	pass # Replace with function body.
+	rotation = direction.angle()
+	await get_tree().create_timer(0.2).timeout
+	queue_free()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position += direction
 	pass
 
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	var parent = area.get_parent()
+	if parent.has_method("take_damage"):
+		parent.take_damage(damage)
+		queue_free()

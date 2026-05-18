@@ -1,7 +1,7 @@
 extends Node2D
 var direction = Vector2(0,0)
 var shurikenSpeed = 8.0
-var damage = 3
+var damage = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
