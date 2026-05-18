@@ -8,9 +8,9 @@ var enemy2 = preload("res://Scenes/Enemy2.tscn")
 @export var min_y = -190.0
 @export var max_y = 210.0
 
-var total_enemies = 20
+var total_enemies = 25
 var enemies_spawned = 0
-var spawn_interval = 20.0 / 20  # 20 seconds / 20 enemies = 1s between each
+var spawn_interval = 20.0 / 25
 var enemies_remaining = 0
 
 var spawn_timer: Timer

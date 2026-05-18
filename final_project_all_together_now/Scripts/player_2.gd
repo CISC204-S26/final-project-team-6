@@ -53,9 +53,9 @@ func _physics_process(_delta):
 		animated_sprite.flip_h = false
 
 	# ---------------- INTERACTION ----------------
-	if Input.is_action_just_pressed("p2_interact"):
-		if nearby_interactables:
-			nearby_interactables.back().interact()
+	#if Input.is_action_just_pressed("p2_interact"):
+		#if nearby_interactables:
+			#nearby_interactables.back().interact()
 
 
 # ---------------- INTERACTION DETECTION ----------------

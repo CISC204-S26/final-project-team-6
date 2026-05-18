@@ -54,9 +54,9 @@ func _physics_process(_delta):
 
 
 	# ---------------- INTERACTION ----------------
-	if Input.is_action_just_pressed("p1_interact"):
-		if nearby_interactables:
-			nearby_interactables.back().interact()
+	#if Input.is_action_just_pressed("p1_interact"):
+		#if nearby_interactables:
+			#nearby_interactables.back().interact()
 
 
 # ---------------- INTERACTION DETECTION ----------------
