@@ -321,6 +321,7 @@ size = Vector2(26, 42)
 
 [node name="Level1" type="Node2D" unique_id=167903798]
 script = ExtResource("1_t3or0")
+max_x = 950.0
 
 [node name="Level1" type="Node2D" parent="." unique_id=1848518747]
 

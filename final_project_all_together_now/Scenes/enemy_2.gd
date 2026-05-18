@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@export var speed = 150
+@export var speed = 250
 @export var min_x = 150
 @export var max_x = 1000
 @export var min_y = 100
