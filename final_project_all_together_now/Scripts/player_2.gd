@@ -9,6 +9,10 @@ var shuriken = preload("res://Scenes/Shuriken.tscn")
 var nearby_interactables = []
 var facing = Vector2(1,0)
 
+var health = 5
+var invincible = false
+var invincibility_duration = 2.0
+
 func _physics_process(_delta):
 
 	# ---------------- INPUT ----------------
@@ -59,14 +63,14 @@ func _physics_process(_delta):
 
 
 # ---------------- INTERACTION DETECTION ----------------
-func _on_interaction_detector_area_entered(area: Area2D) -> void:
-	print("interactable detected")
-	nearby_interactables.append(area)
-
-
-func _on_interaction_detector_area_exited(area: Area2D) -> void:
-	print("interactable removed")
-	nearby_interactables.erase(area)
+#func _on_interaction_detector_area_entered(area: Area2D) -> void:
+	#print("interactable detected")
+	#nearby_interactables.append(area)
+#
+#
+#func _on_interaction_detector_area_exited(area: Area2D) -> void:
+	#print("interactable removed")
+	#nearby_interactables.erase(area)
 
 
 # -----------------------WEAPON USUAGE(WIP)------------------------
@@ -77,3 +81,22 @@ func shoot_shuriken(dir: Vector2):
 	add_sibling(newshuriken)
 	
 	pass
+
+func lose_hp(amount:int)->void:
+	if invincible:
+		return
+	health -= amount
+	print("Player 2 hit! Health remaining: ", health)
+	if health <= 0:
+		die()
+	else:
+		start_invincibility()
+
+func die() -> void:
+	print("Player 2 defeated!")
+	queue_free()
+
+func start_invincibility() -> void:
+	invincible = true
+	await get_tree().create_timer(invincibility_duration).timeout
+	invincible = false

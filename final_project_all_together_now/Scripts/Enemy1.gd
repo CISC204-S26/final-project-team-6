@@ -41,3 +41,8 @@ func die() -> void:
 
 func interact() -> void:
 	print("No interaction")
+
+
+func _on_damage_area_body_entered(body: Node2D) -> void:
+	if body.has_method("lose_hp"):
+		body.lose_hp(1)
