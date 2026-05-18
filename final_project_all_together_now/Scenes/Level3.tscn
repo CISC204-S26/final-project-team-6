@@ -1,6 +1,8 @@
 [gd_scene format=4 uid="uid://blg55ht8qeb8p"]
 
 [ext_resource type="Texture2D" uid="uid://buml2jw0mdmbe" path="res://Assets/TileMap2.2.0.png" id="1_0gyft"]
+[ext_resource type="PackedScene" uid="uid://cab6ui4gxt301" path="res://Scenes/Player1.tscn" id="2_y6vx4"]
+[ext_resource type="PackedScene" uid="uid://wttuql64pwyv" path="res://Scenes/Player2.tscn" id="3_7tk33"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2sg52"]
 texture = ExtResource("1_0gyft")
@@ -317,12 +319,10 @@ size = Vector2(35, 119)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6pjf"]
 size = Vector2(45, 49)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m7vvj"]
-size = Vector2(28, 44)
-
 [node name="Level3" type="Node2D" unique_id=1542197398]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=850465922]
+position = Vector2(336, 320)
 
 [node name="TileMap" type="TileMap" parent="Node2D" unique_id=1691931759]
 tile_set = SubResource("TileSet_y6vx4")
@@ -334,6 +334,7 @@ tile_map_data = PackedByteArray("AAAYAAYAAAAPAAIAAAAYAAcAAAAPAAMAAAAYAAgAAAAPAAQ
 tile_set = SubResource("TileSet_44apn")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1599738073]
+position = Vector2(336, 320)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1659652828]
 position = Vector2(248, -9.5)
@@ -351,102 +352,56 @@ shape = SubResource("RectangleShape2D_cp0jt")
 position = Vector2(56.5, 39.5)
 shape = SubResource("RectangleShape2D_p6pjf")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D4" unique_id=1722994962]
-position = Vector2(256, -16)
-shape = SubResource("RectangleShape2D_p6pjf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D4/CollisionShape2D4" unique_id=1494446257]
-position = Vector2(96, 96)
-shape = SubResource("RectangleShape2D_p6pjf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D4/CollisionShape2D4/CollisionShape2D4" unique_id=1322097947]
-position = Vector2(-433, -1)
-shape = SubResource("RectangleShape2D_p6pjf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D4/CollisionShape2D4/CollisionShape2D4/CollisionShape2D4" unique_id=514512024]
-position = Vector2(0, -287)
-shape = SubResource("RectangleShape2D_p6pjf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D4/CollisionShape2D4/CollisionShape2D4/CollisionShape2D4/CollisionShape2D4" unique_id=1509449219]
-position = Vector2(177, 16)
-shape = SubResource("RectangleShape2D_p6pjf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D4/CollisionShape2D4/CollisionShape2D4/CollisionShape2D4/CollisionShape2D4/CollisionShape2D4" unique_id=577951499]
-position = Vector2(159.5, 79)
-shape = SubResource("RectangleShape2D_p6pjf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D4/CollisionShape2D4/CollisionShape2D4/CollisionShape2D4/CollisionShape2D4/CollisionShape2D4/CollisionShape2D4" unique_id=1850724756]
-position = Vector2(223, -45.5)
-shape = SubResource("RectangleShape2D_p6pjf")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1452829496]
-position = Vector2(-65, 9)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5" unique_id=775443893]
-position = Vector2(-32, 63)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5/CollisionShape2D5" unique_id=84265490]
-position = Vector2(401, 49)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5" unique_id=1838659015]
-position = Vector2(-80, -47)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5" unique_id=861877288]
-position = Vector2(-64, -49)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5" unique_id=411095698]
-position = Vector2(-48, 78)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5" unique_id=336447338]
-position = Vector2(272, -46)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5" unique_id=223300154]
-position = Vector2(112, 0)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5" unique_id=198293717]
-position = Vector2(64, -80)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5" unique_id=901206624]
-position = Vector2(-160, -49)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5" unique_id=5670274]
-position = Vector2(-128, -78)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5" unique_id=710233597]
-position = Vector2(-64, 45)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5" unique_id=1702183125]
-position = Vector2(-160, -45)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5" unique_id=975105659]
-position = Vector2(31, 79)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5" unique_id=1697469918]
-position = Vector2(-159, -32)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5/CollisionShape2D5" unique_id=1543076608]
-position = Vector2(80, 159)
-shape = SubResource("RectangleShape2D_m7vvj")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=262413993]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=262413993]
 position = Vector2(424, -168)
 shape = SubResource("RectangleShape2D_p6pjf")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="CollisionShape2D4" unique_id=1942640350]
-position = Vector2(-448, 112)
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1942640350]
+position = Vector2(-24, -56)
 shape = SubResource("RectangleShape2D_p6pjf")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=1722994962]
+position = Vector2(312.5, 23.5)
+shape = SubResource("RectangleShape2D_p6pjf")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" unique_id=1494446257]
+position = Vector2(408.5, 119.5)
+shape = SubResource("RectangleShape2D_p6pjf")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" unique_id=1322097947]
+position = Vector2(-24.5, 118.5)
+shape = SubResource("RectangleShape2D_p6pjf")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D" unique_id=514512024]
+position = Vector2(-24.5, -168.5)
+shape = SubResource("RectangleShape2D_p6pjf")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D" unique_id=1509449219]
+position = Vector2(152.5, -152.5)
+shape = SubResource("RectangleShape2D_p6pjf")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D" unique_id=577951499]
+position = Vector2(312, -73.5)
+shape = SubResource("RectangleShape2D_p6pjf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1267419853]
+z_index = -1
+offset_left = 260.0
+offset_top = 250.0
+offset_right = 854.0
+offset_bottom = 377.0
+color = Color(0, 1, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1470063553]
+z_index = -2
+offset_left = -31.0
+offset_top = -21.0
+offset_right = 1168.0
+offset_bottom = 662.0
+color = Color(0, 0, 0, 1)
+
+[node name="Player1" parent="." unique_id=1418239182 instance=ExtResource("2_y6vx4")]
+position = Vector2(433, 199)
+
+[node name="Player2" parent="." unique_id=227075506 instance=ExtResource("3_7tk33")]
+position = Vector2(400, 416)
