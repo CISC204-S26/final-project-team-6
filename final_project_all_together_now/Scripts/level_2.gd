@@ -49,4 +49,6 @@ func _on_enemy_died() -> void:
 		wave_complete()
 
 func wave_complete() -> void:
-	print("Wave 2 complete!")
+	print("Wave 2 complete! Rolling The End in 5 seconds.")
+	await get_tree().create_timer(5.0).timeout
+	get_tree().change_scene_to_file("res://Scenes/the end.tscn")
