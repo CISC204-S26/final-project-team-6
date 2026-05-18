@@ -391,6 +391,14 @@ offset_right = 497.64706
 offset_bottom = 206.47063
 color = Color(0, 0, 0, 1)
 
+[node name="ColorRect2" type="ColorRect" parent="Node2D" unique_id=1691407210]
+z_index = -1
+offset_left = -128.23529
+offset_top = -120.58823
+offset_right = 445.29413
+offset_bottom = 133.52943
+color = Color(0.24313726, 0.73333335, 0.92156863, 1)
+
 [node name="LeftBorder" type="StaticBody2D" parent="." unique_id=2106374694]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftBorder" unique_id=970609621]

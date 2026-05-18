@@ -1,6 +1,6 @@
 extends Node2D
 var direction = Vector2(0, 0)
-var damage = 3
+var damage = 2
 
 func _ready() -> void:
 	rotation = direction.angle()
