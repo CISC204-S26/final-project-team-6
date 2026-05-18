@@ -7,9 +7,6 @@ func _ready() -> void:
 	await get_tree().create_timer(0.2).timeout
 	queue_free()
 
-func _process(delta: float) -> void:
-	pass
-
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	var parent = area.get_parent()
 	if parent.has_method("take_damage"):

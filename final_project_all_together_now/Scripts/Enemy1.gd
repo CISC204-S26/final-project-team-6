@@ -38,3 +38,6 @@ func take_damage(amount: int) -> void:
 func die() -> void:
 	print("Enemy defeated!")
 	queue_free()
+
+func interact() -> void:
+	print("No interaction")

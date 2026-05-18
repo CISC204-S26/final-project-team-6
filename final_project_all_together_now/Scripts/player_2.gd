@@ -9,7 +9,7 @@ var shuriken = preload("res://Scenes/Shuriken.tscn")
 var nearby_interactables = []
 var facing = Vector2(1,0)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 
 	# ---------------- INPUT ----------------
 	var input_vector = Vector2.ZERO

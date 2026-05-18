@@ -316,6 +316,8 @@ size = Vector2(43, 43)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f03nf"]
 size = Vector2(26, 42)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_slnnj"]
+
 [node name="Testing1" type="Node2D" unique_id=167903798]
 
 [node name="Level1" type="Node2D" parent="." unique_id=1848518747]
@@ -399,3 +401,30 @@ scale = Vector2(0.4, 0.4)
 [node name="Enemy2" parent="." unique_id=1480797456 instance=ExtResource("6_t3or0")]
 position = Vector2(926, 204)
 scale = Vector2(0.5, 0.5)
+
+[node name="LeftBorder" type="StaticBody2D" parent="." unique_id=2005911443]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftBorder" unique_id=176727857]
+position = Vector2(142, 97)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_slnnj")
+
+[node name="TopBorder" type="StaticBody2D" parent="." unique_id=1382337531]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopBorder" unique_id=82064906]
+position = Vector2(318, 59)
+rotation = 3.1415927
+shape = SubResource("WorldBoundaryShape2D_slnnj")
+
+[node name="RightBorder" type="StaticBody2D" parent="." unique_id=763191931]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightBorder" unique_id=1161039997]
+position = Vector2(1002, 200)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_slnnj")
+
+[node name="BottomBorder" type="StaticBody2D" parent="." unique_id=744807376]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBorder" unique_id=1263658065]
+position = Vector2(584, 593)
+shape = SubResource("WorldBoundaryShape2D_slnnj")
