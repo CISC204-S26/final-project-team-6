@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cab6ui4gxt301" path="res://Scenes/Player1.tscn" id="2_slnnj"]
 [ext_resource type="PackedScene" uid="uid://wttuql64pwyv" path="res://Scenes/Player2.tscn" id="3_t3or0"]
 [ext_resource type="PackedScene" uid="uid://be8g3tmo1saps" path="res://Scenes/Enemy_Test.tscn" id="4_ysn8j"]
+[ext_resource type="PackedScene" uid="uid://dyocpdibm5qet" path="res://Scenes/GWRandomEnemy.tscn" id="5_slnnj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mxmxo"]
 texture = ExtResource("1_jghel")
@@ -394,3 +395,7 @@ scale = Vector2(1.4, 1.4)
 [node name="EnemyTest" parent="." unique_id=1349215165 instance=ExtResource("4_ysn8j")]
 position = Vector2(783, 336)
 scale = Vector2(0.4, 0.4)
+
+[node name="GWRandomEnemy" parent="." unique_id=347226296 instance=ExtResource("5_slnnj")]
+
+[editable path="GWRandomEnemy"]
