@@ -1,10 +1,11 @@
-extends CharacterBody2D
+extends Sprite2D
 
 @export var speed = 150
-@export var min_x = 0
-@export var max_x = 800
-@export var min_y = 0
-@export var max_y = 600
+@export var min_x = 150
+@export var max_x = 1000
+@export var min_y = 100
+@export var max_y = 550
+var health = 3
 
 var move_direction = Vector2.ZERO
 
@@ -13,10 +14,8 @@ func _ready():
 	pick_new_direction()
 	$Timer.start()
 
-func _physics_process(delta):
-
-	velocity = move_direction * speed
-	position += velocity * delta
+func _process(delta):
+	position += move_direction * speed * delta
 
 	# Keep enemy inside area
 	position.x = clamp(position.x, min_x, max_x)
@@ -39,3 +38,14 @@ func pick_new_direction():
 
 func _on_timer_timeout():
 	pick_new_direction()
+
+
+func take_damage(amount: int) -> void:
+	health -= amount
+	print("Enemy hit! Health remaining: ", health)
+	if health <= 0:
+		die()
+
+func die() -> void:
+	print("Enemy defeated!")
+	queue_free()
