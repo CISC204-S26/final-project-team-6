@@ -12,6 +12,8 @@ texture = ExtResource("1_5h1e4")
 script = ExtResource("2_vdfcf")
 
 [node name="HitboxArea" type="Area2D" parent="." unique_id=664492193]
+collision_layer = 2
+collision_mask = 4
 
 [node name="HitboxShape" type="CollisionShape2D" parent="HitboxArea" unique_id=1665818105]
 position = Vector2(-1, -1)

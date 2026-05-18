@@ -14,8 +14,11 @@ scale = Vector2(0.03, 0.034)
 texture = ExtResource("2_4nxnp")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1313935872]
+collision_layer = 4
+collision_mask = 2
 
 [node name="HurtBoxShuriken" type="CollisionShape2D" parent="Area2D" unique_id=2107974289]
 shape = SubResource("CircleShape2D_lmnj0")
 
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
