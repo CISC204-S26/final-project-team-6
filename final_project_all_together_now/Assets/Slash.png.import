@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byn7uqwdxbbs7"
-path="res://.godot/imported/Shuriken.png-7c67e4e006049d161c72450f8a8e707e.ctex"
+uid="uid://brc7ejsn3s3t5"
+path="res://.godot/imported/Slash.png-3aafdd8344b6158a556996b4222f08c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Shuriken.png"
-dest_files=["res://.godot/imported/Shuriken.png-7c67e4e006049d161c72450f8a8e707e.ctex"]
+source_file="res://Assets/Slash.png"
+dest_files=["res://.godot/imported/Slash.png-3aafdd8344b6158a556996b4222f08c7.ctex"]
 
 [params]
 

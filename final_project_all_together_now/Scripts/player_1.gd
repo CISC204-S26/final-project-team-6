@@ -2,15 +2,14 @@ extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 
-@export var speed := 250.0
+@export var speed := 350.0
 
-var shuriken = preload("res://Scenes/Shuriken.tscn")
 var katana = preload("res://Scenes/katana.tscn")
+var facing = Vector2(1,0)
 
 var nearby_interactables = []
 
-func _physics_process(delta):
-
+func _physics_process(_delta):
 	# ---------------- INPUT ----------------
 	var input_vector = Vector2.ZERO
 
@@ -24,12 +23,17 @@ func _physics_process(delta):
 		input_vector.y -= 1
 	
 	input_vector = input_vector.normalized()
-	if Input.is_action_just_pressed("Katana"):
-		slash_katana(velocity)
 
 	# ---------------- MOVEMENT ----------------
 	velocity = input_vector * speed
 	move_and_slide()
+	
+	if input_vector.length() > 0:
+		facing = input_vector.normalized()
+	
+	#Katana Attack
+	if Input.is_action_just_pressed("Katana"):
+		slash_katana(facing)
 
 	# ---------------- ANIMATION ----------------
 
